@@ -2,7 +2,7 @@ C
 C     Returns the general complete elliptic integral
 C
       FUNCTION CEL(QQC,PP,AA,BB)
-      REAL*8 CEL,QQC,PP,AA,BB
+      REAL*8 CEL,QQC,PP,AA,BB,A,B,P,E,EM,QC,F,G,Q
       PARAMETER (CA=.0003, PI02=1.5707963268)
       IF(QQC.EQ.0.)PAUSE 'failure in CEL'
       QC=ABS(QQC)

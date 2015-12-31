@@ -44,7 +44,7 @@ Cnegative 2/3 power of the machine overflow limit. BIG must be at
 Cmost 0.1 × ERRTOL times the negative 2/3 power of the machine
 Cunderflow limit.
       REAL*8 alamb,ave,delx,dely,delz,ea,eb,ec,ed,ee,fac,sqrtx,sqrty,
-     sqrtz,sum,xt,yt,zt
+     * sqrtz,sum,xt,yt,zt
       if(min(x,y).lt.0..or.min(x+y,z).lt.TINY.or.
      * max(x,y,z).gt.BIG)pause 'invalid arguments in rd'
       xt=x
@@ -152,7 +152,8 @@ C              Computes Carlson’s elliptic integral of the third kind, RJ (x, 
         xt=x
         yt=y
         w=1.
-      else xt=x-y
+      else
+        xt=x-y
         yt=-y
         w=sqrt(x)/sqrt(xt)
       endif
