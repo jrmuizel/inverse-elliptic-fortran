@@ -26,6 +26,7 @@ C
       ENDIF
 1     F=A
       A=A+B/P
+      G=E/P
       B=B+F*G
       B=B+B
       P=G+P
