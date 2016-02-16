@@ -1,5 +1,23 @@
 C
 C     Returns the general complete elliptic integral
+C     cel(kc, p, a, b) with QQC = kc, PP = p
+C
+C     This is the Fortran code from the first edition
+C     of "Numerical Recipies"
+C
+C     The Fortran code is a translation of the ALGOL
+C     code from:
+C     "Numerical Calculation of Elliptic Integrals and
+C      Elliptic Functions. III*" by Roland Bulirsch.
+C     Numerische Mathematik 13, 305--315 (1969)
+C
+C     Complete elliptic integral of the 1st kind:
+C      cel(kc, 1, 1, 1)
+C     Complete elliptic integral of the 2nd kind:
+C      cel(kc, 1, 1, kc*kc)
+C     Complete elliptic integral of the 3rd kind:
+C      cel(kc, p, 1, 1)
+C
 C
       FUNCTION CEL(QQC,PP,AA,BB)
       REAL*8 CEL,QQC,PP,AA,BB,A,B,P,E,EM,QC,F,G,Q
